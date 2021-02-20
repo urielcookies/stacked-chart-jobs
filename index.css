@@ -1,0 +1,63 @@
+/**
+MAIN CONTENT CSS
+**/
+body{
+    padding: 1.2rem;
+}
+
+#stack-bar-container{
+    width:600px;
+    min-height: 600px;
+    border : 1px solid grey;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+      box-sizing: border-box;
+      padding : 4px;
+}
+
+  
+  #legend-container{
+      text-align: center;
+      opacity: 0;
+  }
+
+#stack-bar{
+    flex:1
+}
+
+
+  #controls{
+      text-align: center;
+      padding: 8px;
+  }
+
+  #date-range{
+      width: 200px;
+      display: inline-block;
+      padding : 4px 8px;
+      margin-top: 16px;
+  }
+
+  .date-picker-wrapper{
+      width : 200px;
+      display: inline-block;
+      padding : 5px 8px;
+      margin-top: px;
+  }
+
+  .date-picker-wrapper > input{
+      display: inline;
+  }
+
+  #date-picker-2-container{
+      display: inline-block;
+  }
+
+
+
+  #reset-button.datetime-reset-button{
+    visibility: hidden !important;
+
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Job Stack Chart</title>
+</head>
+
+<body>
+    <div id="stack-bar-container">
+        <div id="title">
+
+        </div>
+        <div id="stack-bar">
+
+        </div>
+        <div id="legend-container"></div>
+    </div>
+    <!-- The bottom controls for the Data Filtering -->
+    <div id="controls">
+        <div><input id="scaling" type="checkbox" /><label style='margin-left:6px' for="scaling">Scale to result
+                range</label></div>
+        Displaying and plotting jobs run <select name="date-range" class="form-select form-select-md mb-3"
+            id="date-range">
+            <option selected value="in-last-day"> In Last day</option>
+            <option value="in-last-week"> In Last week</option>
+            <option value="in-last-month"> In Last month</option>
+            <option value="in-last-year"> In Last year</option>
+            <option value="before"> Before</option>
+            <option value="after"> After</option>
+            <option value="between"> Between</option>
+        </select>
+        <div class="date-picker-wrapper">
+            <input id="start-date" class="form-control" type="date">
+        </div>
+        <div id="date-picker-2-container" class="inline">
+            and
+            <div class="date-picker-wrapper">
+                <input id="end-date" class="form-control date-picker" type="date">
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data-1970-2030.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
