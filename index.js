@@ -404,8 +404,10 @@
                     const { queuedTime, startTime, endTime } = progress;
                     let queueTimer = queuedTime;
                     let startTimeTimer = startTime;
-                    while (time(queueTimer) <= time(startTimeTimer)) {
+                    if (time(queueTimer) <= time(startTimeTimer)) {
                         allPartitions[getPartition(queueTimer, dateRange)]['queue_length']++;
+                    }
+                    while (time(queueTimer) <= time(startTimeTimer)) {
                         queueTimer = new Date(queueTimer.getTime() + 1000 * 60);
                     }
 
